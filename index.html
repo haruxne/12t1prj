@@ -28,9 +28,10 @@
 			    <div class="user-icon">
 			        <img src="user-button.png" alt="User">
 			    </div>
-			    <div class="search-icon">
+			    <div class="search-icon" onclick="toggleSearchBox()">
 			        <img src="search-button.png" alt="Search">
 			    </div>
+			    <input type="text" class="search-box" id="searchBox" placeholder="Tìm kiếm...">
 			</div>
 		</nav>
 
@@ -117,7 +118,7 @@
 		            <img src="https://m.media-amazon.com/images/S/pv-target-images/75bb6f0721a505a35b3b51ab09aaaff1f20e4eda79f4a37fb8c399e3dcbeaa64.jpg" alt="Movie 3">
 		        </div>
 		        <div class="movie-card">
-		            <img src="https://d263ao8qih4miy.cloudfront.net/wp-content/uploads/2022/02/2521_groupposter-1.jpg" alt="Movie 3">
+		            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWt89za6DKhXAZI1Py23Uzcgkif4bbDRLNgw&s" alt="Movie 3">
 		        </div>
 		    </div>
 		</div>
@@ -169,6 +170,14 @@
 
 	    function closeModal() {
 	        document.getElementById("videoModal").style.display = "none"; 
+	    }
+
+	    function toggleSearchBox() {
+	        const searchBox = document.getElementById("searchBox");
+	        if (searchBox.style.display === "none" || searchBox.style.display === "") 
+	            searchBox.style.display = "block"; 
+	        else 
+	            searchBox.style.display = "none";	        
 	    }
 
 	    window.onclick = function(event) {
