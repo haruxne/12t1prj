@@ -40,6 +40,7 @@ body {
 }
 
 .navbar-icons {
+    position: relative;
     display: flex;
     gap: 1rem;
     align-items: center;
@@ -275,4 +276,22 @@ body {
     color: white;
     font-size: 30px;
     cursor: pointer;
+}
+
+.search-box {
+    display: none; 
+    width: 200px;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 0;
+    transition: all 0.3s ease; 
+}
+
+.search-box.show {
+    display: block; 
+}
+
+.search-icon {
+    cursor: pointer; 
 }
